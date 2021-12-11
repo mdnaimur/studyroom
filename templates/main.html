@@ -1,14 +1,15 @@
-{% include 'navbar.html' %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Study Metting Room</title>
 </head>
 <body>
-    <h1>Home view template</h1>
+    {% include 'navbar.html' %}
+    
+    {% block content %}
+    {% endblock content %}
 </body>
 </html>
