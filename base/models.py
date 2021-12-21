@@ -1,8 +1,18 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 from django.db.models.deletion import CASCADE
+from django.db.models.fields import CharField
 
 # Create your models here.
+
+
+class User(AbstractUser):
+    name = models.CharField(max_length=200, null=True)
+    email = models.EmailField(unique=True, null=True)
+    bio = models.TextField(null=True)
+    avatar = models.ImageField(null=True,default="avatar.svg")
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
 
 
 class Topic(models.Model):
@@ -13,17 +23,18 @@ class Topic(models.Model):
 
 
 class Room(models.Model):
-    host = models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
-    topic = models.ForeignKey(Topic, on_delete=models.SET_NULL,null=True)
+    host = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    topic = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
-    participants = models.ManyToManyField(User, related_name='paticipants', blank=True)
+    participants = models.ManyToManyField(
+        User, related_name='paticipants', blank=True)
     updated = models.DateField(auto_now=True)
     # auto_now_add time date update ons'
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ['-updated', '-created']  
+        ordering = ['-updated', '-created']
 
     def __str__(self) -> str:
         return self.name
@@ -36,9 +47,9 @@ class Message(models.Model):
     updated = models.DateField(auto_now=True)
     # auto_now_add time date update ons'
     created = models.DateTimeField(auto_now_add=True)
-    
+
     class Meta:
-        ordering = ['-updated', '-created']  
-        
+        ordering = ['-updated', '-created']
+
     def __str__(self) -> str:
         return self.body[0:50]
