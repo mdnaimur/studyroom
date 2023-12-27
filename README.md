@@ -19,24 +19,24 @@ The *Study and group meeting share* is an online platform dedicated to communica
 - **User Authentication:** User can create an account and loggedIn.
 
 * Sign Up Form *
-<img src="static/smp/registration.png" style="width:400px; height:400px" alt="image" />
+<img src="static/smp/registration.png" style="width:600px; height:400px" alt="image" />
 
 * LogIn Form *
-<img src="static/smp/login.png" style="width:400px; height:400px" alt="image" />
-<img src="static/smp/profileuser.png" style="width:400px; height:400px" alt="image" />
+<img src="static/smp/login.png" style="width:600px; height:400px" alt="image" />
+<img src="static/smp/profileuser.png" style="width:600px; height:400px" alt="image" />
 
 - **Home Page:** Can See all  Post and Topic
 
-<img src="static/smp/homepage.png" style="width:400px; height:400px" alt="image" />
+<img src="static/smp/homepage.png" style="width:600px; height:400px" alt="image" />
 
 
 - **Individual Topic and  Posting :** 
 
-<img src="static/smp/newroom.png" style="width:400px; height:300px" alt="image" />
+<img src="static/smp/newroom.png" style="width:600px; height:300px" alt="image" />
 
 - **Comment and Reply Option:** 
 
-<img src="static/smp/gropchat.png" style="width:400px; height:300px" alt="image" />
+<img src="static/smp/gropchat.png" style="width:600px; height:300px" alt="image" />
 
 
 
