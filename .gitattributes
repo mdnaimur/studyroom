@@ -1,0 +1,18 @@
+# .gitattributes
+
+# Python
+*.py linguist-language=Python
+
+# HTML
+*.html linguist-language=HTML
+
+# CSS
+*.css linguist-language=CSS
+
+# JavaScript
+*.js linguist-language=JavaScript
+
+# Django-specific files
+requirements.txt linguist-language=Text
+manage.py linguist-language=Python
+settings.py linguist-language=Python
