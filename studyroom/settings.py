@@ -18,7 +18,7 @@ DEBUG = True
 
 
 #for vercel app hosting 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
