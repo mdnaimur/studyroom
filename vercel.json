@@ -1,0 +1,14 @@
+{
+    "builds": [
+        {
+            "src": "studyroom/wsgi.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "studyroom/wsgi.py"
+        }
+    ]
+}
